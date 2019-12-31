@@ -27,3 +27,29 @@
 2. 进行文件监听
 # yourpath为你要监听的本地目录
 python synWatch.py yourpath
+
+
+
+# python文件打包成EXE
+例子：
+1、使用pycharm安装pyinstaller。
+
+2、找到pyinstaller的安装目录。
+
+C:\Users\lounious\PycharmProjects\untitled\venv\Scripts\pyinstaller-script.py
+
+注意在该目录的母目录下一般有我们的程序文件
+
+C:\Users\lounious\PycharmProjects\untitled
+
+3、将我们要打包的程序copy至pyinstaller的安装目录下：
+
+C:\Users\lounious\PycharmProjects\untitled\venv\Scripts\
+
+4、打开cmd，找到该路径 cd C:\Users\lounious\PycharmProjects\untitled\venv\Scripts\，输入命令pyinstaller -F  *.py
+
+如下图显示，打包成功。
+
+5、此时在Scripts的目录下能够看到已经生成的dist目录和*.spec文件。运行*.exe文件即可。
+
+6、也可以使用命令pyinstaller -F  *.py，该命令会将所有的依赖放到一个文件夹中。相当于-F的解压。
